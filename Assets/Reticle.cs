@@ -3,10 +3,11 @@ using System.Collections;
 
 public class Reticle : MonoBehaviour {
 	public Camera CameraFacing; 
+	private Vector3 originalScale; 
 
 	// Use this for initialization
 	void Start () {
-	
+		originalScale = transform.localScale; 
 	}
 	
 	// Update is called once per frame
@@ -23,6 +24,6 @@ public class Reticle : MonoBehaviour {
 			CameraFacing.transform.rotation * Vector3.forward * 2.0f;
 		transform.LookAt (CameraFacing.transform.position);
 		transform.Rotate (0.0f, 180.0f, 0.0f);
-		//transform.localScale = Vector3.one * distance; 
+//		transform.localScale = Vector3.one * distance; 
 	}
 }
