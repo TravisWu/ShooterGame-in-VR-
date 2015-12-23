@@ -23,5 +23,6 @@ public class Reticle : MonoBehaviour {
 			CameraFacing.transform.rotation * Vector3.forward * 2.0f;
 		transform.LookAt (CameraFacing.transform.position);
 		transform.Rotate (0.0f, 180.0f, 0.0f);
+		//transform.localScale = Vector3.one * distance; 
 	}
 }
